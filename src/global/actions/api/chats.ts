@@ -297,6 +297,7 @@ addActionHandler('openThread', async (global, actions, payload): Promise<void> =
 
     loadingChatId = originChannelId;
     loadingThreadId = originMessageId;
+    console.log("here openThread action = ", loadingChatId, loadingThreadId);
   }
 
   const chat = selectChat(global, loadingChatId);
@@ -367,6 +368,8 @@ addActionHandler('openThread', async (global, actions, payload): Promise<void> =
     chat: selectChat(global, loadingChatId)!,
     messageId: Number(loadingThreadId),
   });
+
+  console.log("here fetchDiscussionMessage = ", result?.chatId, result?.threadId);
 
   global = getGlobal();
   loadingThread = selectTabState(global, tabId).loadingThread;

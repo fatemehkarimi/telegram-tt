@@ -1163,6 +1163,8 @@ export async function searchMessagesLocal({
     abortControllerThreadId: threadId,
   });
 
+  console.log("here result of search = ", result);
+
   if (
     !result
     || result instanceof GramJs.messages.MessagesNotModified

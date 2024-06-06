@@ -43,6 +43,7 @@ const CommentButton: FC<OwnProps> = ({
   } = threadInfo;
 
   const handleClick = useLastCallback(() => {
+    console.log("here chat id = ", chatId);
     openThread({
       isComments: true, chatId, originMessageId, originChannelId,
     });

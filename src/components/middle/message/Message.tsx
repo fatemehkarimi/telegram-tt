@@ -994,6 +994,7 @@ const Message: FC<OwnProps & StateProps> = ({
 
     return (
       <div className={className} onDoubleClick={handleContentDoubleClick} dir="auto">
+        <div style="border: 1px solid red;">{messageId}</div>
         {!asForwarded && renderSenderName()}
         {hasSubheader && (
           <div className="message-subheader">
